@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body{
+    background: white;
+    overflow-x: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: radial-gradient(circle at 50% -20.71%, #ff65b3 0, #ff59c0 10%, #ff4ecd 20%, #ff45d9 30%, #ff3fe6 40%, #f23cf2 50%, #d33ffe 60%, #ad46ff 70%, #7b4fff 80%, #0058ff 90%, #0060ff 100%);
+}
+
+h1{
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 40px;
+}
+
+.linea{
+    background: whitesmoke;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+.datos{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.gallery{
+    width: 80%;
+    margin: 100px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    
+}
+
+.gallery .img-card{
+    overflow: hidden;
+    border-radius: 6px;
+    border: black 2px solid;
+   
+}
+
+.gallery .img-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+
+.gallery .img-card img:hover{
+    transform: scale(1.5 ) rotate(30deg);
+}
+
+/** MODAL **/
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.modal .list{
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(1, 200px);
+}
+
+.modal .list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.modal #mymodalimg{
+    width: 50%;
+    display: block;
+    margin: auto;
+    max-width: 700px;
+}
+
+.modal .caption-text{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0px;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+/** ANIMACION  DE ZOOM **/
+
+@keyframes zoom {
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
